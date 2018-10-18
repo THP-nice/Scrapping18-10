@@ -1,5 +1,5 @@
 require './lib/app/townhalls_scrapper.rb'
-require './lib/app/townhalls_mailers.rb'
+require './lib/app/townhalls_mailer.rb'
 require './lib/app/townhalls_adder_to_db.rb'
 require './lib/app/townhalls_follower'
 require './lib/views/done.rb'
@@ -48,7 +48,7 @@ class Index
           puts "\n\n"
       end
     when 4
-      if csv == "" || json == ""
+      if json == ""
         puts "\n You need to scrapp all the data before beeing able to send emails.".red
         puts "  Please choose option 1 before to scrapp the data first.\n\n\n".red
       else
